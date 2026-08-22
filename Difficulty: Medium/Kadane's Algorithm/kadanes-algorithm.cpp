@@ -1,17 +1,16 @@
 class Solution {
-	public:
-	int maxSubarraySum(vector<int> &arr) {
-		int sum = 0;
-		int ans = INT_MIN;
-		for (int i = 0; i<arr.size(); i++) {
-			sum += arr[i];
-			if (sum < 0) {
-				ans = max(ans, sum);
-				sum = 0;
-				continue;
-			}
-			ans = max(ans, sum);
-		}
-		return ans;
-	}
+  public:
+    int maxSubarraySum(vector<int> &arr) {
+        int ans=INT_MIN;
+        int sum=0;
+        for(auto x:arr){
+            sum+=x;
+            ans=max(sum,ans);
+            if(sum<0){
+                sum=0;
+                continue;
+            }
+        }
+        return ans;
+    }
 };
