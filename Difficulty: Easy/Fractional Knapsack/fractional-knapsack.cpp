@@ -12,11 +12,6 @@ class Solution {
 			return a.first>b.first;
 		});
 		
-// 		for (int i = 0; i<n; i++) {
-// 			cout << arr[i].first << " " << arr[i].second << endl;
-// 		}
-// 		cout << "hogya";
-		
 		double ans = 0;
 		double W = capacity;
 		for (int i = 0; i<n; i++) {
